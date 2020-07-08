@@ -6,12 +6,8 @@ Atmosphere has its own bootloader, called fusee (primary). For the purposes of t
 
 &nbsp;
 
-!!! danger "Notice"
-    Your SD card will need to be formatted as either FAT32 or exFAT. FAT32 is recommended as it is more stable and will work out of the box with the Switch's operating system, but has a file size limit of 4GB. If you plan on using exFAT, you will need to install the exFAT update for your Switch, which is downloaded when you insert an exFAT formatted SD card in to your Switch. Note that this will update your console and requires an internet connection.
-
-
-!!! warning "NxThemeInstaller"
-    The ban risks of using Switch themes are at this time unknown. Use them at your own risk.
+!!! danger "FAT32 vs exFAT"
+    Your SD card will need to be formatted as either FAT32 or exFAT, but FAT32 is recommended as it is more stable and will work out of the box with the Switch's operating system. Using exFAT on the Switch should be avoided due to the filesystem being prone to corruption, and sometimes preventing custom firmware from booting. You will also need to install the exFAT update for your Switch, which is downloaded when you insert an exFAT formatted SD card in to your Switch. Note that this will update your console and requires an internet connection.
     
 
 !!! warning "File name extensions"
@@ -31,7 +27,6 @@ Atmosphere has its own bootloader, called fusee (primary). For the purposes of t
     - The latest release of <a href="https://github.com/mtheall/ftpd/releases" target="_blank">FTPD</a> (Download the `ftpd.nro` release of FTPD)
     - The latest release of <a href="https://github.com/exelix11/SwitchThemeInjector/releases" target="_blank">NXThemeInstaller</a> (Download the `NxThemesInstaller.nro` release of NxThemeInstaller)
     - The latest release of <a href="https://github.com/joel16/NX-Shell/releases" target="_blank">NX-Shell</a> (Download the `NX-Shell.nro` release of nx-shell)
-    - The latest release of <a href="https://github.com/ITotalJustice/atmosphere-updater/releases" target="_blank">atmosphere-updater</a>.
     - The latest release of the <a href="https://github.com/vgmoose/hb-appstore/releases" target="_blank">hbappstore</a> (Download the `appstore.nro` release of hbappstore)
 
 
@@ -42,13 +37,14 @@ Atmosphere has its own bootloader, called fusee (primary). For the purposes of t
     2. Copy *the contents of* the Atmosphere `.zip` file to the root of your SD card
     3. Copy the `bootloader` folder from the Hekate `.zip` file to the root of your SD card
     4. Copy the `bootloader` folder from the `bootlogos.zip` file to the root of your SD card
+       - If you're asked to merge the bootloader folders, do so
     5. Copy Hekate's `.bin` file from the Hekate `.zip` file to the `atmosphere` folder on your SD card
     6. Delete `reboot_payload.bin` in the `atmosphere` folder on your SD card
     7. Rename Hekate's `.bin` file to `reboot_payload.bin`
     8. Copy `hekate_ipl.ini` to the `bootloader` folder on your SD card
     9. Copy `Lockpick_RCM.bin` to the `/bootloader/payloads` folder on your SD card
     10. Create a folder named `appstore` inside the `switch` folder on your SD card, and put `appstore.nro` in it
-    11. Copy `Checkpoint.nro`, `ftpd.nro`, `NX-Shell.nro`, `NxThemesInstaller.nro` and `atmosphere-updater.nro` to the `switch` folder on your SD card
+    11. Copy `Checkpoint.nro`, `ftpd.nro`, `NX-Shell.nro` and `NxThemesInstaller.nro` to the `switch` folder on your SD card
     12. Reinsert your SD card back into your Switch
 
      ![sdfilesimg](../img/sdfiles.png)

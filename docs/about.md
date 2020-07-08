@@ -7,7 +7,7 @@ This guide was written by staff members of the [Nintendo Homebrew Discord Server
 &nbsp;
 
 !!! tip "Credits"
-    **Flump, jerbear64, Phoenix, xGhostBoyx, Such Meme Many Skill, and oreo639.**
+    **Flump, jerbear64, Phoenix, xGhostBoyx, Such Meme Many Skill, PhazonicRidley, emmo, dennthecafebabe, Dax, and oreo639.**
 
     Thank you to [everyone else](https://github.com/nh-server/switch-guide/graphs/contributors) that contributed to the guide on GitHub, but special thanks to **noirscape**.
 
@@ -36,4 +36,3 @@ This guide was written by staff members of the [Nintendo Homebrew Discord Server
     - **Nexrem (meganukebmp)** for the [Switch 90DNS Tester](https://github.com/meganukebmp/Switch_90DNS_tester).
     - **exelix11** for [Switch Theme Injector](https://github.com/exelix11/SwitchThemeInjector/releases).
     - **vgmoose** for [hb-appstore](https://github.com/vgmoose/hb-appstore).
-    - **ITotalJustice** for [atmosphere-updater](https://github.com/ITotalJustice/atmosphere-updater).
