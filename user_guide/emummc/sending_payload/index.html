@@ -127,6 +127,10 @@
 </li>
                                     
 <li>
+    <a href="../../../extras/transfer_sd/" class="dropdown-item">Changing SD cards</a>
+</li>
+                                    
+<li>
     <a href="../../../extras/glossary/" class="dropdown-item">Glossary</a>
 </li>
                                 </ul>
@@ -187,7 +191,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#chomebook" class="nav-link">Chomebook</a>
+            <li class="nav-item" data-level="2"><a href="#chromebook" class="nav-link">Chromebook</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -201,7 +205,7 @@
 <h1 id="sending-a-payload">Sending a Payload</h1>
 <div class="admonition warning">
 <p class="admonition-title">If you are here to test if your Switch is patched</p>
-<p>Make sure you have <a href="../entering_rcm/">put your device into RCM</a> and downloaded Hekate (if necessary, extract its zip file onto the root of your SD card) before continuing. Once finished, if your console is <strong>not</strong> patched, continue with <a href="../partitioning_sd/">Partitioning the SD</a> instead of <code>Making the emuMMC</code> at the end of this page.</p>
+<p>Make sure you have <a href="../entering_rcm/">put your device into RCM</a> and downloaded Hekate (if necessary, extract its zip file onto the root of your SD card) before continuing. Once finished, if your console is <strong>not</strong> patched, continue with <a href="../partitioning_sd/">Partitioning the SD</a>.</p>
 </div>
 <p>Now that the device is in RCM, we will need to send it a payload. The methods are mostly the same, but slightly differ depending on what hardware you have available.</p>
 <p>&nbsp;</p>
@@ -252,7 +256,7 @@
 <h3 id="instructions_1">Instructions</h3>
 <div class="admonition tip">
 <ol>
-<li>Download and run the payload injector (if you are on Linux, you will need to run this program as root or use <code>sudo</code>).</li>
+<li>Download and run the payload injector (if you're on Linux, you will need to run this program as root, use <code>sudo</code>, or follow the instructions at <a href="../../../extras/adding_udev/">Linux injection without root</a>).</li>
 <li>Connect your Switch in RCM to your PC using the USB cable.</li>
 <li>Wait for your Switch to be shown as found in the injector.</li>
 <li>Press <code>Select Payload</code>, and navigate to and select your payload <code>.bin</code> file.<ul>
@@ -306,7 +310,7 @@
 </ol>
 </div>
 <p>&nbsp;</p>
-<h2 id="chomebook">Chomebook</h2>
+<h2 id="chromebook">Chromebook</h2>
 <h3 id="what-you-need_3">What you need</h3>
 <div class="admonition tip">
 <ul>
@@ -368,7 +372,7 @@
                 </p>
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
