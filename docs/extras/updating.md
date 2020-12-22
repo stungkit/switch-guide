@@ -10,14 +10,15 @@ When updating Atmosphere always make sure to _read the release notes_. They may 
 
 When a new version of Atmosphere releases, you can update Atmosphere by following these steps:
 
+<!-- Notice for easy removal later once EXPERIMENTAL releases aren't needed:  This section below has a notice about EXPIREMENTAL release. -->
+
 1. Turn off your Nintendo Switch and plug your SD card in your computer.
-2. Back up `reboot_payload.bin` from the `atmosphere` folder of your SD card to your computer.
-3. Download the latest release of <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank">Atmosphere</a> (Download the `atmosphere-(version).zip` release of Atmosphere.)
-4. Copy *the contents of* the Atmosphere `.zip` file to the root of your SD card.
+2. Download the latest release of <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank">Atmosphere</a> (Download the `atmosphere-(version)-master-(version)+hbl-(version)+hbmenu-(version).zip` release of Atmosphere. Do not download the `atmosphere-EXPERIMENTAL-(version)-master-(version)+hbl-(version)+hbmenu-(version).zip` release.)
+3. Copy *the contents of* the Atmosphere `.zip` file to the root of your SD card.
     - If you are prompted to overwrite files, do so, _except_ for the `.ini` files.
     - If you do accidentally overwrite the `.ini` files, this is not an emergency but you will lose any changes you made to Atmospheres settings.
-5. Place your copy of `reboot_payload.bin` in the `atmosphere` folder. If you are prompted to overwrite files, do so.
-6. Put your SD card back in your Switch and launch CFW.
+4. (If your hekate is not on the latest version) Update hekate via the steps below
+5. Put your SD card back in your Switch and launch CFW.
 
 ## Updating Hekate
 
@@ -28,16 +29,14 @@ When a new version of Hekate releases, you can update by following these steps:
 1. Turn off your Nintendo Switch and plug your SD card in your computer.
 2. Download the latest version of <a href="https://github.com/CTCaer/Hekate/releases/" target="_blank">Hekate</a> (Download the `hekate_ctcaer_(version).zip` release of hekate).
 3. Copy the `bootloader` folder from the Hekate `.zip` file to the root of your SD card. If you are asked to overwrite or merge files while copying, say yes to merge/overwrite them.
-4. Copy Hekate's `.bin` file from the Hekate `.zip` file to the `atmosphere` folder on your SD card.
-5. If you already have `reboot_payload.bin` in the `atmosphere` folder on your SD card, delete it.
-6. Rename Hekate's `.bin` file to `reboot_payload.bin`.
-7. Put your SD card back in your Switch and launch CFW.
+4. Put your SD card back in your Switch and launch Hekate.
+5. Go to the Options tab at the top right of the screen. Turn "Update Reboot 2 Payload" on the bottom right ON (if it isn't on already). Tap "Save Options" at the bottom of the screen.
 
 ## Updating your firmware
 
 Always check _before_ updating your system firmware if the latest version of Atmosphere _as well_ as the latest version of Hekate support the firmware version you are updating towards.
 
-Currently the latest version supported by Atmosphere and Hekate is: **10.0.4**.
+Currently the latest version supported by Atmosphere and Hekate is: **11.0.1**.
 
 In addition, updating to or past some firmwares update the gamecard firmware. Reference the table below for information about these.
 
@@ -47,7 +46,9 @@ In addition, updating to or past some firmwares update the gamecard firmware. Re
 | Below 4.0.0                          | 4.0.0 or above                                | Yes                       |
 | On or above 4.0.0, but below 9.0.0   | At least 4.1.0 but below 9.0.0                | No                        |
 | On or above 4.0.0, but below 9.0.0   | 9.0.0 or above                                | Yes                       |
-| On or above 9.0.0                    | Latest supported Atmosphere & Hekate revision | No                        |
+| On or above 9.0.0, but below 11.0.0  | At least 9.1.0 but below 11.0.0               | No                        |
+| On or above 9.0.0, but below 11.0.0  | 11.0.0 or above                               | Yes                       |
+| On or above 11.0.0                   | Latest supported Atmosphere & Hekate revision | No                        |
 
 If at least one of the versions you are updating towards also updates the gamecard firmware, you will not be able to downgrade below that version without making the gamecard slot unusable until you update.
 
@@ -79,40 +80,34 @@ If you keep your emuMMC offline, you will have to use a gamecard to update your 
 
 !!!tip ""
     - The latest release of <a href="https://github.com/suchmememanyskill/TegraExplorer/releases" target="_blank">TegraExplorer</a>
-    - The latest release of <a href="https://switchtools.sshnuke.net" target="_blank">ChoiDujourNX</a>
     - The latest release of <a href="https://github.com/Atmosphere-NX/Atmosphere/releases" target="_blank">Atmosphere</a>
-
-!!!danger ""
-    ChoiDujourNX is **not** the same as ChoiDujour. Please make sure you download ChoiDujour**NX**!
+    - Your prod.keys file (if you don't have them, use <a href="https://github.com/shchmue/Lockpick_RCM" target="_blank">Lockpick_RCM</a> to dump them)
 
 ### Preparing your SD card
 
 1. Insert your microSD card into your computer.
-2. Make a folder inside your `switch` folder called `system updates`.
-3. Download `TegraExplorer.bin` and place it somewhere on your PC (A good idea is to put it where you keep all your switch payloads like Hekate).
-3. Copy `ChoiDujourNX.nro` to `/switch/system updates` from the `ChoiDujourNX.zip` file.
-4. Update Atmosphere and Hekate by using the above guides.
-5. If you haven't already, update the sysMMC to the latest firmware.
+2. Download `TegraExplorer.bin` and place it somewhere on your PC (A good idea is to put it where you keep all your switch payloads like Hekate).
+3. Update Atmosphere and Hekate by using the above guides.
+4. If you haven't already, update the sysMMC to the latest firmware.
 
 ### Dumping your sysMMC firmware
 
 1. Make sure your sysMMC is up to date. If your sysMMC is not up-to-date, update it through the System Settings.
 2. Inject `TegraExplorer.bin` using TegraRCMGUI (Like you would with Hekate).
-3. Using the volume and power buttons, select `Tools` and then `Dump Firmware`.
+3. Using the volume and power buttons, select `Tools`, then `Dump Firmware` and for the format type choose `Daybreak`.
 4. Wait about 1-2 minutes for the tool to dump your firmware.
 5. When the tool finishes, press any volume button.
-6. Select `Exit` and then `Reboot to Hekate`.
+6. Select `Exit` and then `Reboot to Atmosphere`.
 
-### Updating your emuMMC with ChoiDujourNX
+### Updating your emuMMC with Daybreak
 
 1. In Hekate go to `Launch -> Atmosphere FSS0 Emu`.
-2. Once booted, hold `R` while launching a game to boot into the homebrew launcher.
-3. Navigate to the `system updates` folder where you should see ChoiDujourNX, launch it.
-4. Once in ChoiDujourNX, navigate to `tegraexplorer/Firmware/<latest firmware number>`. In that folder you should see a large number of `.nca` files.
-5. Tap on `Choose` in the bottom right hand corner of the screen.
-6. When given the option, select your firmware that you have just dumped. If it is available, choose the update with `(Exfat)`.
-7. Tap `Select firmware` in the bottom right hand corner of the screen.
-8. Tap `Start installation`.
-9. Wait until ChoiDujourNX completes installing the dumped firmware.
-10. Once it completes, it will ask you if it can reboot. Tap `Reboot`.
-11. Once rebooted, launch into emuMMC and verify your system works. You can verify your system has been properly updated in `Settings -> System` on your emuMMC.
+2. Once booted, hold `R` while launching a game to boot into the homebrew menu.
+3. Find Daybreak in the homebrew menu and launch it.
+4. Tap on `Install` and navigate to `tegraexplorer/Firmware/<latest firmware number>`.
+5. Tap on `Continue` and then `Preserve settings`.
+    - If you see the message `Warning: exFAT firmware is missing or corrupt`, you likely don't have the exFAT drivers installed on your sysMMC. Just press continue if this is the case.
+6. If it is available choose `Install (FAT32 + exFAT)`, otherwise `Install (FAT32)` and then `Continue`.
+7. Wait until Daybreak completes installing the dumped firmware.
+8. Once it completes, it will ask if you want to reboot. Tap `Reboot`.
+9. Once rebooted, launch into emuMMC and verify your system works. You can verify your system has been properly updated in `Settings -> System`.
