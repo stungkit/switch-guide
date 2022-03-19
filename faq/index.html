@@ -6,18 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="NH Discord Server.">
-        
+        <link rel="canonical" href="https://nh-server.github.io/switch-guide/faq/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>FAQ - NH Switch Guide</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css">
         <link href="../css/custom.css" rel="stylesheet">
 
         <script src="../js/jquery-1.10.2.min.js" defer></script>
         <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
@@ -79,7 +79,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../extras/blocking_updates/" class="dropdown-item">Blocking Updates</a>
+    <a href="../extras/blocking_nintendo/" class="dropdown-item">Blocking Nintendo servers</a>
 </li>
                                     
 <li>
@@ -104,6 +104,10 @@
                                     
 <li>
     <a href="../extras/game_modding/" class="dropdown-item">Game Modding</a>
+</li>
+                                    
+<li>
+    <a href="../extras/cheats/" class="dropdown-item">Game Cheats</a>
 </li>
                                     
 <li>
@@ -222,11 +226,6 @@
               </ul>
             </li>
             
-            <li class="nav-item" data-level="2"><a href="#amazonebayaliexpress-jigs" class="nav-link">Amazon/eBay/Aliexpress jigs</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
             <li class="nav-item" data-level="2"><a href="#my-homebrew-is-not-showing-up-on-the-menu" class="nav-link">My homebrew is not showing up on the menu</a>
               <ul class="nav flex-column">
               </ul>
@@ -261,9 +260,10 @@ Once the Switch is in RCM it needs to be connected to either a computer, phone o
 These jigs are made in a way that they slide into the right joycon rail and have a piece of connected wire that then bridges pin 10 and one of the grounded pins on the Switch. 
 A lot of different designs for these jigs exist, but it is important to understand, that these jigs can damage the Switch if they are made in a bad way.</p>
 <p>Since the wire in the jig is supposed to touch the pads inside the Switch's joycon rail, it is important to use wire that is thin, not rigid and bent/not pointy. 
-Paperclips make for potentially dangerous jigs, as they are made out of a hard material, are rigid and pointy and can easily scratch off the pads inside the Switch. 
-A good jig uses 32Gauge(0.2mm diameter) wire and is bent in a way that the end of the wire does not scratch the pads. <a href="https://switchjigs.com/" target="_blank">Switch Jigs</a> sells jigs we consider "good". 
-You can also download and 3d-print your own jig and use the pictures on the website to guide you on how to bend the wire correctly.</p>
+Paperclips make for potentially dangerous jigs, as they are made out of a hard material, are rigid and pointy and can easily scratch off the pads inside the Switch.
+A good jig uses 32Gauge(0.2mm diameter) wire and is bent in a way that the end of the wire does not scratch the pads.
+You can download and 3d-print your own jig and use the pictures on <a href="https://www.thingiverse.com/thing:2892320">this website</a> to guide you on how to bend the wire correctly.
+Premade jigs can be found on online marketplaces for cheap.</p>
 </div>
 <h2 id="is-there-an-easier-way-to-enter-rcm">Is there an easier way to enter RCM?</h2>
 <div class="admonition tip">
@@ -286,7 +286,7 @@ On every boot the Switch firmware checks how many e-fuses have been burned and h
 Major updates to the Switch, or updates in which a large vulnerability has been patched, irreversibly burn one of the Switch's 64 "e-fuses". 
 <em>If the Switch ever detects that more e-fuses have been burned than expected (meaning a downgrade happened), it will refuse to boot. Replacing e-fuses is not an option.</em>
 You can find more information about fuses <a href="https://switchbrew.org/wiki/Fuses#Anti-downgrade" target="_blank">here</a>
-Atmosphere 0.16.1 works fine with the new 11.0.1 firmware update on unpatched units. The situation for patched and new units is this:</p>
+Atmosphere 1.2.6 works fine with the new 13.2.1 firmware update on unpatched units. The situation for patched and new units is this:</p>
 <ul>
 <li>
 <p><strong>"Old"</strong> <em>Patched Switch (HAC-001): Do NOT update past 7.0.1. Units on 7.0.1 and below will eventually get CFW. Patched units that have upgraded to 8.0.0 or 8.0.1 will likely get homebrew.</em></p>
@@ -355,10 +355,6 @@ These microSD cards are often fake and do not have the advertised amount of stor
 Amazon has had some problems with fake SD cards, so we recommend buying them at a physical store. Even on trustworthy sites, <em>always, always check reviews on a product before buying!!</em></p>
 <p>If you suspect your microSD card is fake or damaged, see the instructions <a href="https://3ds.eiphax.tech/sd.html" target="_blank">here</a> to verify the integrity of your SD card.</p>
 </div>
-<h2 id="amazonebayaliexpress-jigs">Amazon/eBay/Aliexpress jigs</h2>
-<div class="admonition tip">
-<p>Although some Switch jigs are for sale on these websites and others like them, we have <em>no way of verifying that they are appropriate or safe for use with the Switch</em> and as such we do not recommend buying from these websites. The only seller we trust due to their reputation and our overall experience with the many jigs they have sent out is <a href="https://switchjigs.com/" target="_blank">Switch Jigs</a>.</p>
-</div>
 <h2 id="my-homebrew-is-not-showing-up-on-the-menu">My homebrew is not showing up on the menu</h2>
 <div class="admonition tip">
 <p>This is an issue primarily affecting macOS users, but may occur on other devices as well. If you are able to launch the homebrew menu, but you are not seeing some or any of your homebrew, you will need to unset the archive bit with Hekate.</p>
@@ -366,7 +362,7 @@ Amazon has had some problems with fake SD cards, so we recommend buying them at 
 <li>Send the Hekate payload to your Switch by following these instructions: <a href="https://nh-server.github.io/switch-guide/user_guide/emummc/sending_payload/">here</a></li>
 <li>Click on <code>Tools</code> on the top menu bar</li>
 <li>In the bottom left corner click on <code>Archive bit * AutoRCM</code></li>
-<li>Click on <code>Unset Archive bit</code> - this might take a while</li>
+<li>Click on <code>Fix Archive bit</code> - this might take a while</li>
 <li>Press <code>Close</code> in the top right corner</li>
 <li>Press <code>Home</code> in the top menu bar to get back from where you started</li>
 <li>Follow the instructions at the Launching CFW page <a href="https://nh-server.github.io/switch-guide/user_guide/emummc/launching_cfw/">here</a> to launch Atmosphere.</li>
@@ -377,7 +373,7 @@ Amazon has had some problems with fake SD cards, so we recommend buying them at 
 
         <footer class="col-md-12">
             <hr>
-                <p>Copyright &copy; 2019 <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>, Maintained by the <a href="/switch-guide/about">NH Discord Server</a>.</p>
+                <p>Copyright &copy; 2022 <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>, Maintained by the <a href="/switch-guide/about">NH Discord Server</a>.</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
@@ -395,16 +391,13 @@ Amazon has had some problems with fake SD cards, so we recommend buying them at 
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
+                <p>From here you can search these documents. Enter your search terms below.</p>
                 <form>
                     <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
