@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-28T04:01:21.515Z",
+  "generatedAt": "2026-10-01T04:30:57.778Z",
   "error": null,
   "firmware": {
-    "version": "23.0.0",
+    "version": "23.0.1",
     "sourceUrl": "https://yls8.mtheall.com/ninupdates/reports.php"
   },
   "atmosphere": {
