@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-10-13T13:41:05.243Z",
+  "generatedAt": "2026-10-16T03:25:16.973Z",
   "error": null,
   "firmware": {
     "version": "23.0.1",
     "sourceUrl": "https://yls8.mtheall.com/ninupdates/reports.php"
   },
   "atmosphere": {
-    "tag": "1.12.0",
-    "url": "https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.12.0",
-    "publishedAt": "2026-09-27T23:21:53Z",
+    "tag": "1.12.1",
+    "url": "https://github.com/Atmosphere-NX/Atmosphere/releases/tag/1.12.1",
+    "publishedAt": "2026-10-16T00:05:51Z",
     "supportedFirmware": "23.0.0"
   },
   "hekate": {
